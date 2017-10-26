@@ -213,6 +213,8 @@ d3.biHiSankey = function () {
         d3.sum(node.leftLinks, value),
         d3.sum(node.rightLinks, value)
       );
+      node.inputFlow = d3.sum(visible(node.targetLinks), value);
+      node.outputFlow = d3.sum(visible(node.sourceLinks), value);
       node.netFlow = d3.sum(visible(node.targetLinks), value) - d3.sum(visible(node.sourceLinks), value);
       node.height = Math.max(nodeHeight(visible(node.leftLinks)), nodeHeight(visible(node.rightLinks)));
       node.linkSpaceCount = Math.max(Math.max(node.leftLinks.length, node.rightLinks.length) - 1, 0);
