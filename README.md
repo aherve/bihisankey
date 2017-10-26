@@ -2,6 +2,9 @@
 
 This is a d3 javascript plugin/library for generating bidirectional hierarchial sankey diagrams
 
+The sourcecode is almost entirely forked from [@Neilos's work](https://github.com/Neilos/bihisankey). Kudos to him !
+I've mostly created a npm wrapper and added a `depth` property to the nodes.
+
 ### Live Code Demonstration
 
 For a a full demonstration of the use of this library:

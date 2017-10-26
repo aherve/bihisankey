@@ -1,0 +1,23 @@
+{
+  "name": "bihisankey",
+  "version": "1.0.0",
+  "description": "Bi-directional hierarchical sankey diagram",
+  "main": "bihisankey.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aherve/bihisankey.git"
+  },
+  "keywords": [
+    "d3",
+    "sankey"
+  ],
+  "author": "Aurélien Hervé",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aherve/bihisankey/issues"
+  },
+  "homepage": "https://github.com/aherve/bihisankey#readme"
+}
