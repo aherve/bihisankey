@@ -535,10 +535,12 @@ d3.biHiSankey = function () {
   }
 
 
-  biHiSankey.arrowheadScaleFactor = function (_) {
-    if (!arguments.length) { return arrowheadScaleFactor; }
-    arrowheadScaleFactor = +_;
+  biHiSankey.setArrowheadScaleFactor = function (ascf) {
+    arrowheadScaleFactor = ascf;
     return biHiSankey;
+  }
+  biHiSankey.arrowheadScaleFactor = function () {
+    return arrowheadScaleFactor
   };
 
   biHiSankey.collapsedNodes = function () {
@@ -620,36 +622,49 @@ d3.biHiSankey = function () {
     return link;
   };
 
-  biHiSankey.links = function (_) {
-    if (!arguments.length) { return links; }
-    links = _.filter(function (link) {
+  biHiSankey.setLinks = function (ls) {
+    links = ls.filter(function (link) {
       return link.source !== link.target; // filter out links that go nowhere
     });
     return biHiSankey;
+  }
+
+  biHiSankey.links = function (_) {
+    return
   };
 
-  biHiSankey.linkSpacing = function (_) {
-    if (!arguments.length) { return linkSpacing; }
-    linkSpacing = +_;
+  biHiSankey.setLinkSpacing = function (spacing) {
     return biHiSankey;
+  }
+
+  biHiSankey.linkSpacing = function () {
+    return linkSpacing
   };
 
-  biHiSankey.nodes = function (_) {
-    if (!arguments.length) { return nodes; }
-    nodes = _;
-    return biHiSankey;
+  biHiSankey.setNodes = function(ns) {
+    nodes = ns
+    return biHiSankey
+  }
+  biHiSankey.nodes = function () {
+    return nodes
   };
 
-  biHiSankey.nodeWidth = function (_) {
-    if (!arguments.length) { return nodeWidth; }
-    nodeWidth = +_;
+  biHiSankey.setNodeWidth = function (width) {
+    nodeWidth = width;
     return biHiSankey;
+  }
+
+  biHiSankey.nodeWidth = function () {
+    return nodeWidth
   };
 
-  biHiSankey.nodeSpacing = function (_) {
-    if (!arguments.length) { return nodeSpacing; }
-    nodeSpacing = +_;
+  biHiSankey.setNodeSpacing = function (sp) {
+    nodeSpacing = sp;
     return biHiSankey;
+  }
+
+  biHiSankey.nodeSpacing = function () {
+    nodeSpacing
   };
 
   biHiSankey.relayout = function () {
@@ -659,10 +674,12 @@ d3.biHiSankey = function () {
     return biHiSankey;
   };
 
-  biHiSankey.size = function (_) {
-    if (!arguments.length) { return size; }
-    size = _;
-    return biHiSankey;
+  biHiSankey.setSize = function (s) {
+    size = s
+    return biHiSankey
+  }
+  biHiSankey.size = function () {
+    return size
   };
 
   biHiSankey.visibleLinks = function () {
