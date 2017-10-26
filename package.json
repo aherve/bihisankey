@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/aherve/bihisankey/issues"
   },
-  "homepage": "https://github.com/aherve/bihisankey#readme"
+  "homepage": "https://github.com/aherve/bihisankey#readme",
+  "dependencies": {
+    "d3": "~3"
+  }
 }
