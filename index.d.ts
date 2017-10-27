@@ -1,21 +1,21 @@
 import * as d3 from 'd3'
 
-interface BHNode {
-  Xdepth?: number
-  Ydepth?: number
-  id: string
-  name: string
-  parent: string|null
-  type: string
-}
-
-interface BHLink {
-  source: string
-  target: number
-  value: number
-}
-
 declare module 'd3' {
+
+  export interface BHNode {
+    Xdepth?: number
+    Ydepth?: number
+    id: string
+    name: string
+    parent: string|null
+    type: string
+  }
+
+  export interface BHLink {
+    source: string
+    target: string
+    value: number
+  }
 
   interface BiHiSankey {
     arrowheadScaleFactor: () => number
