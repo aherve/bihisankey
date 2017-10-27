@@ -25,10 +25,10 @@ biHiSankey
 To (re)initialize the sankey diagram with data
 ```javascript
 var someNodes = [
-  {"type": "A", "id": 1, "parent": null, "name": "Node 1", depth: 0},
+  {"type": "A", "id": 1, "parent": null, "name": "Node 1", Xdepth: 0, Ydepth: 1},
   {"type": "A", "id": 2, "parent": "1", "name": "Node 2"},
   {"type": "A", "id": 3, "parent": "1", "name": "Node 3"},
-  {"type": "B", "id": 4, "parent": null, "name": "Node 4", depth: 1},
+  {"type": "B", "id": 4, "parent": null, "name": "Node 4", Xdepth: 1, Ydepth: 3},
   {"type": "B", "id": 5, "parent": "4", "name": "Node 5"},
   {"type": "C", "id": 6, "parent": "5", "name": "Node 6"},
 ]
@@ -49,7 +49,8 @@ biHiSankey
   })
 ```
 
-If two nodes `(n1, n2)` have different depths: `n1.depth < n2.depth` then the node `n1` will be placed to the left of `n2`
+If two nodes `(n1, n2)` have different Xdepths: `n1.Xdepth < n2.Xdepth` then the node `n1` will be placed to the left of `n2`
+If two nodes `(n1, n2)` have different Ydepths: `n1.Ydepth < n2.Ydepth` then the node `n1` will be placed on top of `n2`
 
 To (re)calculate the attributes of all nodes and links:
 ```javascript

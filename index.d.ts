@@ -1,7 +1,8 @@
 import * as d3 from 'd3'
 
 interface BHNode {
-  depth?: number
+  Xdepth?: number
+  Ydepth?: number
   id: string
   name: string
   parent: string|null

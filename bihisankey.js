@@ -281,7 +281,7 @@ d3.biHiSankey = function () {
   }
 
   function computeNodeXPositions() {
-    var remainingNodes = nodes.sort((n1, n2) => (n2.depth || 0) - (n1.depth || 0)),
+    var remainingNodes = nodes.sort((n1, n2) => (n2.Xdepth || 0) - (n1.Xdepth || 0)),
         nextNodes,
         x = 0,
         addToNextNodes = function (link) {
@@ -376,7 +376,9 @@ d3.biHiSankey = function () {
 
     function initializeNodeYPosition() {
       nodesByXPosition.forEach(function (nodes) {
-        nodes.forEach(function (node, i) {
+        nodes
+          .sort((n1, n2) => (n1.Ydepth || 0) - (n2.Ydepth || 0))
+          .forEach(function (node, i) {
           node.y = i;
           node.heightAllowance = node.value * yScaleFactor + linkSpacing * node.linkSpaceCount;
         });
